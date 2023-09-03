@@ -8,9 +8,7 @@ alias lg=lazygit
 if [ $commands[nvim] ]; then
 	alias vim=nvim
 	alias v=nvim
-alias vim=nvim
-alias v=nvim
-
+fi
 
 if [ $commands[tmuxp] ]; then
 	alias txf='tmuxp freeze'

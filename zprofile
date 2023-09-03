@@ -7,8 +7,3 @@ if [[ -z $DISPLAY && -z $WAYLAND_DISPLAY && $TTY == '/dev/tty1' ]]; then
 
 	exit
 fi
-
-if [[ $ZSH_TMUX == "true" && -z "$TMUX" ]]; then
-	tmux new -At main
-	exit;
-fi

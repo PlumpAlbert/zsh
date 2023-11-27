@@ -14,3 +14,7 @@ if [ $commands[tmuxp] ]; then
 	alias txf='tmuxp freeze'
 	alias txl='tmuxp load -y .'
 fi
+
+if [[ $TERM == 'xterm-kitty' ]]; then
+	alias ssh='kitten ssh'
+fi

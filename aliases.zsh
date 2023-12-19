@@ -1,11 +1,7 @@
 #!/bin/zsh
 
-which exa >/dev/null 2>&1
-
-[ $? -eq 0 ] && alias ls='exa' || alias ls='ls --color'
-alias la='ls -a'
-alias l='ls -l'
-alias lla='ls -al'
+alias zcr='source ${ZDOTDIR:-$HOME}/.zshrc'
+alias zce='${EDITOR:-vim} ${ZDOTDIR:-$HOME}/.zshrc'
 
 alias lg=lazygit
 

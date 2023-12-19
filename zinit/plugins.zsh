@@ -12,6 +12,7 @@ zinit wait lucid light-mode for \
 	OMZL::clipboard.zsh \
 	rupa/z \
 	zpm-zsh/ls \
+	micha/resty \
 	lukechilds/zsh-nvm \
 	Aloxaf/fzf-tab
 

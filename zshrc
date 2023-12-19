@@ -4,20 +4,8 @@ ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 [ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"
 [ ! -d $ZINIT_HOME/.git ] && git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
 source "${ZINIT_HOME}/zinit.zsh"
+source "${ZDOTDIR}/config.zsh"
 
-bindkey -e
-autoload -z edit-command-line
-zle -N edit-command-line
-bindkey "^[[1;5C" forward-word
-bindkey "^[[1;5D" backward-word
-bindkey "^[[H"   beginning-of-line
-bindkey "^[[F"   end-of-line
-bindkey "^[[3~"  delete-char
-bindkey '^H' backward-kill-word
-bindkey '5~' kill-word
-bindkey '^X^E' edit-command-line
-
-setopt promptsubst auto_cd auto_pushd extended_glob hist_ignore_dups inc_append_history
 
 zinit wait lucid light-mode for \
 	atinit"zicompinit; zicdreplay" \

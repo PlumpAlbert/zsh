@@ -7,3 +7,6 @@ export PATH="$HOME/.local/bin:$HOME/.local/scripts:$HOME/.cargo/bin:$PATH"
 
 export HISTFILE="${HOME}/.cache/zsh_history"
 export SAVEHIST=1000
+
+[ -f "/lib/ssh/x11-ssh-askpass" ] \
+	&& export SUDO_ASKPASS="/lib/ssh/x11-ssh-askpass"

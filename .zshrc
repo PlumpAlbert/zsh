@@ -82,4 +82,11 @@ zi ice wait lucid as"command" from"gh-r" \
 zi light starship/starship
 # }}}
 
+# {{{ zoxide
+zi ice wait lucid from"gh-r" as"program" \
+	atclone"./zoxide init zsh > init.zsh" \
+	atpull"%atclone" src"init.zsh"
+zi light ajeetdsouza/zoxide
+# }}}
+
 # }}}

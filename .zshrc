@@ -93,7 +93,7 @@ zi light z-shell/zsh-zoxide
 
 # {{{ direnv
 zi ice wait lucid from"gh-r" as"program" \
-	mv "direnv* -> direnv" \
+	mv"direnv* -> direnv" \
 	atclone"./direnv hook zsh > init.zsh" \
 	atpull"%atclone" src"init.zsh"
 zi light direnv/direnv

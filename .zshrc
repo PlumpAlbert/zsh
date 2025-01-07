@@ -83,10 +83,20 @@ zi light starship/starship
 # }}}
 
 # {{{ zoxide
-zi ice wait lucid from"gh-r" as"program" \
-	atclone"./zoxide init zsh > init.zsh" \
-	atpull"%atclone" src"init.zsh"
+zi ice wait lucid as'null' from"gh-r" sbin
 zi light ajeetdsouza/zoxide
+
+zi ice wait lucid has'zoxide' \
+	atinit'z(){ __zoxide_z "$@"; }'
+zi light z-shell/zsh-zoxide
+# }}}
+
+# {{{ direnv
+zi ice wait lucid from"gh-r" as"program" \
+	mv "direnv* -> direnv" \
+	atclone"./direnv hook zsh > init.zsh" \
+	atpull"%atclone" src"init.zsh"
+zi light direnv/direnv
 # }}}
 
 # }}}

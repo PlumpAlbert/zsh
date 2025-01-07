@@ -32,3 +32,6 @@ zi light junegunn/fzf
 
 zi ice from"gh-r" as"program" mv"ripgrep*/rg -> rg"
 zi light BurntSushi/ripgrep
+
+zi ice from"gh-r" as"program"
+zi light eza-community/eza

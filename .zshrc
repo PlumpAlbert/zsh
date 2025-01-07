@@ -20,6 +20,19 @@ zi light-mode for \
 zicompinit # <- https://wiki.zshell.dev/docs/guides/commands
 # }}}
 
+# {{{ set options
+HISTSIZE=5000
+HISTFILE="$HOME/.cache/zsh_history"
+SAVEHIST="$HISTFILE"
+HISTDUP=erase
+setopt appendhistory
+setopt sharehistory
+setopt incappendhistory
+setopt hist_ignore_dups
+setopt hist_ignore_all_dups
+setopt hist_save_no_dups
+setopt hist_find_no_dups
+
 autoload -z edit-command-line
 zle -N edit-command-line
 bindkey "^X^E" edit-command-line
@@ -27,6 +40,7 @@ bindkey "^X^E" edit-command-line
 bindkey "^[[H" beginning-of-line
 bindkey "^[[F" end-of-line
 bindkey "^[[3~" delete-char
+# }}}
 
 zinit light z-shell/F-Sy-H
 zinit light z-shell/z-a-rust

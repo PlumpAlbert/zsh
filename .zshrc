@@ -49,3 +49,6 @@ zi light sharkdp/bat
 
 zi ice wait lucid from"gh-r" as"program"
 zi light jesseduffield/lazygit
+
+zi ice wait lucid atinit"ZSH_FNM_NODE_VERSION=18; ZSH_FNM_INSTALL_DIR=${HOME}/.local/share/fnm"
+zi light "dominik-schwabe/zsh-fnm"

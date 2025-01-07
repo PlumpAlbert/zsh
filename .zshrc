@@ -26,3 +26,6 @@ bindkey "^[[3~" delete-char
 
 zinit light z-shell/F-Sy-H
 zinit light z-shell/z-a-rust
+
+zi ice from"gh-r" as"program"
+zi light junegunn/fzf

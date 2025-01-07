@@ -122,7 +122,17 @@ zi ice wait lucid from"gh-r" as"program" \
 zi light direnv/direnv
 # }}}
 
+# {{{ github cli
+zi ice as"command" from"gh-r" \
+	mv"gh*/bin/gh -> gh" \
+	atclone"./gh completion -s zsh > _gh" \
+	atpull"%atclone"
+zi light cli/cli
 # }}}
+
+# }}}
+
+# {{{ base
 
 zi light z-shell/F-Sy-H
 zi light z-shell/z-a-rust
@@ -138,3 +148,13 @@ fi
 if [[ ! "$SSH_AUTH_SOCK" ]]; then
 	eval "$(<"${XDG_RUNTIME_DIR:-$HOME/.cache}/ssh-agent.env")" >/dev/null
 fi
+
+# }}}
+
+# {{{ aliases
+
+if ! [ -z $commands[yay] ]; then
+	alias yay="https_proxy=socks5h://vpn.plumpalbert.xyz:37456 http_proxy=socks5h://vpn.plumpalbert.xyz:37456 ${commands[yay]}"
+fi
+
+# }}}

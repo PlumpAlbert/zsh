@@ -23,3 +23,6 @@ bindkey "^X^E" edit-command-line
 bindkey "^[[H" beginning-of-line
 bindkey "^[[F" end-of-line
 bindkey "^[[3~" delete-char
+
+zinit light z-shell/F-Sy-H
+zinit light z-shell/z-a-rust

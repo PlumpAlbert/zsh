@@ -35,3 +35,8 @@ zi light BurntSushi/ripgrep
 
 zi ice from"gh-r" as"program"
 zi light eza-community/eza
+
+alias ls="eza --icons=always --group-directories-first"
+alias l="ls -l"
+alias la="ls -A"
+alias lla="ls -lA"

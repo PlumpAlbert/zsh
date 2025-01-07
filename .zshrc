@@ -46,3 +46,6 @@ zi light sharkdp/fd
 
 zi ice from"gh-r" as"program" mv"bat*/bat -> bat"
 zi light sharkdp/bat
+
+zi ice from"gh-r" as"program"
+zi light jesseduffield/lazygit

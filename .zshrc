@@ -27,13 +27,13 @@ bindkey "^[[3~" delete-char
 zinit light z-shell/F-Sy-H
 zinit light z-shell/z-a-rust
 
-zi ice from"gh-r" as"program"
+zi ice wait lucid from"gh-r" as"program"
 zi light junegunn/fzf
 
-zi ice from"gh-r" as"program" mv"ripgrep*/rg -> rg"
+zi ice wait lucid from"gh-r" as"program" mv"ripgrep*/rg -> rg"
 zi light BurntSushi/ripgrep
 
-zi ice from"gh-r" as"program"
+zi ice wait lucid from"gh-r" as"program"
 zi light eza-community/eza
 
 alias ls="eza --icons=always --group-directories-first"
@@ -41,11 +41,11 @@ alias l="ls -l"
 alias la="ls -A"
 alias lla="ls -lA"
 
-zi ice from"gh-r" as"program" mv"fd*/fd -> fd"
+zi ice wait lucid from"gh-r" as"program" mv"fd*/fd -> fd"
 zi light sharkdp/fd
 
-zi ice from"gh-r" as"program" mv"bat*/bat -> bat"
+zi ice wait lucid from"gh-r" as"program" mv"bat*/bat -> bat"
 zi light sharkdp/bat
 
-zi ice from"gh-r" as"program"
+zi ice wait lucid from"gh-r" as"program"
 zi light jesseduffield/lazygit

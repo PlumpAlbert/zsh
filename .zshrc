@@ -123,3 +123,10 @@ zi light direnv/direnv
 # }}}
 
 # }}}
+
+zi light z-shell/F-Sy-H
+zi light z-shell/z-a-rust
+zi light Aloxaf/fzf-tab
+
+zi ice blockf atpull"zinit creinstall -q ."
+zi light zsh-users/zsh-completions

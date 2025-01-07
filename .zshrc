@@ -23,7 +23,7 @@ zicompinit # <- https://wiki.zshell.dev/docs/guides/commands
 # {{{ set options
 HISTSIZE=5000
 HISTFILE="$HOME/.cache/zsh_history"
-SAVEHIST="$HISTFILE"
+SAVEHIST="$HISTSIZE"
 HISTDUP=erase
 setopt appendhistory
 setopt sharehistory

@@ -75,4 +75,11 @@ zi ice wait lucid atinit"ZSH_FNM_NODE_VERSION=18; ZSH_FNM_INSTALL_DIR=${HOME}/.l
 zi light "dominik-schwabe/zsh-fnm"
 # }}}
 
+# {{{ starship theme
+zi ice wait lucid as"command" from"gh-r" \
+	atclone"./starship init zsh > init.zsh; ./starship completions zsh > _starship" \
+	atpull"%atclone" src"init.zsh"
+zi light starship/starship
+# }}}
+
 # }}}

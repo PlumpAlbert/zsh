@@ -40,3 +40,6 @@ alias ls="eza --icons=always --group-directories-first"
 alias l="ls -l"
 alias la="ls -A"
 alias lla="ls -lA"
+
+zi ice from"gh-r" as"program" mv"fd*/fd -> fd"
+zi light sharkdp/fd

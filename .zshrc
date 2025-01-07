@@ -43,3 +43,6 @@ alias lla="ls -lA"
 
 zi ice from"gh-r" as"program" mv"fd*/fd -> fd"
 zi light sharkdp/fd
+
+zi ice from"gh-r" as"program" mv"bat*/bat -> bat"
+zi light sharkdp/bat

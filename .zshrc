@@ -42,9 +42,17 @@ bindkey "^[[F" end-of-line
 bindkey "^[[3~" delete-char
 # }}}
 
-zinit light z-shell/F-Sy-H
-zinit light z-shell/z-a-rust
-zinit light zsh-users/zsh-completions
+# {{{ oh-my-zsh
+zi wait lucid light-mode for \
+	OMZL::git.zsh \
+	OMZL::prompt_info_functions.zsh \
+		atload"unalias grv" OMZP::git \
+	OMZP::python \
+	OMZP::colored-man-pages \
+	OMZP::sudo \
+	OMZP::gitignore \
+	OMZP::kubectl
+# }}}
 
 # {{{ Installing programs
 

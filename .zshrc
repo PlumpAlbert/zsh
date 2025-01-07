@@ -30,6 +30,7 @@ bindkey "^[[3~" delete-char
 
 zinit light z-shell/F-Sy-H
 zinit light z-shell/z-a-rust
+zinit light zsh-users/zsh-completions
 
 # {{{ Installing programs
 
@@ -76,7 +77,7 @@ zi light "dominik-schwabe/zsh-fnm"
 # }}}
 
 # {{{ starship theme
-zi ice wait lucid as"command" from"gh-r" \
+zi ice as"command" from"gh-r" \
 	atclone"./starship init zsh > init.zsh; ./starship completions zsh > _starship" \
 	atpull"%atclone" src"init.zsh"
 zi light starship/starship

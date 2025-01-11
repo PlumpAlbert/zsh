@@ -57,8 +57,9 @@ zi wait lucid light-mode for \
 # {{{ Installing programs
 
 # {{{ fzf
-zi ice wait lucid from"gh-r" as"program"
+zi ice from"gh-r" as"program"
 zi light junegunn/fzf
+eval "$( fzf --zsh )"
 # }}}
 
 # {{{ ripgrep

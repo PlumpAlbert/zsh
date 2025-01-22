@@ -160,4 +160,8 @@ if ! [ -z $commands[yay] ]; then
 	alias yay="https_proxy=socks5h://vpn.plumpalbert.xyz:37456 http_proxy=socks5h://vpn.plumpalbert.xyz:37456 ${commands[yay]}"
 fi
 
+if ! [ -z $commands[tmux] ]; then
+	alias t='tmux'
+fi
+
 # }}}

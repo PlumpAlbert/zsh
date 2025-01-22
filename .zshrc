@@ -154,6 +154,8 @@ fi
 
 # {{{ aliases
 
+alias ez="$EDITOR '$HOME/.zshrc'; source '$HOME/.zshrc'"
+
 if ! [ -z $commands[yay] ]; then
 	alias yay="https_proxy=socks5h://vpn.plumpalbert.xyz:37456 http_proxy=socks5h://vpn.plumpalbert.xyz:37456 ${commands[yay]}"
 fi

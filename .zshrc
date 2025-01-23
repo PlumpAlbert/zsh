@@ -107,12 +107,9 @@ zi light starship/starship
 # }}}
 
 # {{{ zoxide
-zi ice wait lucid as'null' from"gh-r" sbin
+zi ice as'null' from"gh-r" sbin
 zi light ajeetdsouza/zoxide
-
-zi ice wait lucid has'zoxide' \
-	atinit'z(){ __zoxide_z "$@"; }'
-zi light z-shell/zsh-zoxide
+eval "$( zoxide init --cmd cd zsh )"
 # }}}
 
 # {{{ direnv

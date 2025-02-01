@@ -99,6 +99,16 @@ zi ice wait lucid atinit"ZSH_FNM_NODE_VERSION=18; ZSH_FNM_INSTALL_DIR=${HOME}/.l
 zi light "dominik-schwabe/zsh-fnm"
 # }}}
 
+# {{{ bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+if ! [ -d "$BUN_INSTALL" ]; then
+	curl -fsSL https://bun.sh/install | bash
+fi
+# bun completions
+[ -s "$BUN_INSTALL/_bun" ] && source "$BUN_INSTALL/_bun"
+# }}}
+
 # {{{ starship theme
 zi ice as"command" from"gh-r" \
 	atclone"./starship init zsh > init.zsh; ./starship completions zsh > _starship" \

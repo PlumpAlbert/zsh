@@ -32,7 +32,12 @@ setopt hist_ignore_dups
 setopt hist_ignore_all_dups
 setopt hist_save_no_dups
 setopt hist_find_no_dups
+setopt auto_cd
+setopt auto_menu
+setopt magic_equal_subst
 
+zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
+autoload -Uz compinit && compinit
 autoload -z edit-command-line
 zle -N edit-command-line
 bindkey "^X^E" edit-command-line

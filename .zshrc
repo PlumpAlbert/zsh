@@ -148,6 +148,11 @@ zi ice as'program' from'gh-r' bpick'*.tar.gz' sbin'**/bin/nvim -> nvim'
 zi light neovim/neovim
 #}}}
 
+#{{{ sesh
+zi ice as"program" from"gh-r"
+zi light joshmedeski/sesh
+#}}}
+
 # }}}
 
 # {{{ base

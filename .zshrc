@@ -143,6 +143,11 @@ zi ice as"command" from"gh-r" \
 zi light cli/cli
 # }}}
 
+#{{{ neovim
+zi ice as'program' from'gh-r' bpick'*.tar.gz' sbin'**/bin/nvim -> nvim'
+zi light neovim/neovim
+#}}}
+
 # }}}
 
 # {{{ base

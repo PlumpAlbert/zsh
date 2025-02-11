@@ -182,7 +182,7 @@ if ! [ -z $commands[yay] ]; then
 fi
 
 if ! [ -z $commands[tmux] ]; then
-	alias t='tmux'
+	alias t='sesh connect "$( sesh list -i | fzf )"'
 fi
 
 # }}}

@@ -160,7 +160,7 @@ zi light z-shell/F-Sy-H
 zi light z-shell/z-a-rust
 zi light Aloxaf/fzf-tab
 
-zi ice blockf atpull"zinit creinstall -q ."
+zi ice lucid wait as"completion"
 zi light zsh-users/zsh-completions
 
 if ! pgrep -u "$USER" ssh-agent >/dev/null; then

@@ -163,13 +163,11 @@ zi light Aloxaf/fzf-tab
 zi ice lucid wait as"completion"
 zi light zsh-users/zsh-completions
 
-if ! pgrep -u "$USER" ssh-agent >/dev/null; then
-	ssh-agent -t 1d > "${XDG_RUNTIME_DIR:-$HOME/.cache}/ssh-agent.env"
-fi
-
-if [[ ! "$SSH_AUTH_SOCK" ]]; then
-	eval "$(<"${XDG_RUNTIME_DIR:-$HOME/.cache}/ssh-agent.env")" >/dev/null
-fi
+export GPG_TTY=$(tty)
+export SSH_AGENT_PID=""
+export SSH_AUTH_SOCK="$HOME/.gnupg/S.gpg-agent.ssh"
+export GPG_AGENT_SOCK="$HOME/.gnupg/S.gpg-agent"
+gpg-agent --daemon --enable-ssh-support >/dev/null 2>&1
 
 # }}}
 

@@ -163,12 +163,17 @@ zi light Aloxaf/fzf-tab
 zi ice lucid wait as"completion"
 zi light zsh-users/zsh-completions
 
-export GPG_TTY=$(tty)
-export SSH_AGENT_PID=""
-export SSH_AUTH_SOCK="$HOME/.gnupg/S.gpg-agent.ssh"
-export GPG_AGENT_SOCK="$HOME/.gnupg/S.gpg-agent"
-gpg-agent --daemon --enable-ssh-support >/dev/null 2>&1
-
+unset SSH_AGENT_PID
+if [ "${gnupg_SSH_AUTH_SOCK_by:-0}" -ne $$ ]; then
+	export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
+	export GPG_TTY=$(tty)
+	gpg-connect-agent updatestartuptty /bye >/dev/null
+	gpg --list-secret-keys --keyid-format=long \
+		| sed -nE 's/.*<(.+\@.+)>.*/\1/p' \
+		| while read -r EMAIL; do
+			echo 'shit' | gpg --sign -u "$EMAIL" > /dev/null;
+		done
+fi
 # }}}
 
 # {{{ aliases

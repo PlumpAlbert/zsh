@@ -17,6 +17,10 @@ zi light-mode for \
   z-shell/z-a-meta-plugins \
   @annexes # <- https://wiki.zshell.dev/ecosystem/category/-annexes
 # examples here -> https://wiki.zshell.dev/community/gallery/collection
+
+zi ice lucid wait as"completion"
+zi light zsh-users/zsh-completions
+
 zicompinit # <- https://wiki.zshell.dev/docs/guides/commands
 # }}}
 
@@ -160,29 +164,17 @@ zi light z-shell/F-Sy-H
 zi light z-shell/z-a-rust
 zi light Aloxaf/fzf-tab
 
-zi ice lucid wait as"completion"
-zi light zsh-users/zsh-completions
-
 unset SSH_AGENT_PID
 if [ "${gnupg_SSH_AUTH_SOCK_by:-0}" -ne $$ ]; then
 	export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
 	export GPG_TTY=$(tty)
 	gpg-connect-agent updatestartuptty /bye >/dev/null
-	gpg --list-secret-keys --keyid-format=long \
-		| sed -nE 's/.*<(.+\@.+)>.*/\1/p' \
-		| while read -r EMAIL; do
-			echo 'shit' | gpg --sign -u "$EMAIL" > /dev/null;
-		done
 fi
 # }}}
 
 # {{{ aliases
 
 alias ez="$EDITOR '$HOME/.zshrc'; source '$HOME/.zshrc'"
-
-if ! [ -z $commands[yay] ]; then
-	alias yay="https_proxy=socks5h://vpn.plumpalbert.xyz:37456 http_proxy=socks5h://vpn.plumpalbert.xyz:37456 ${commands[yay]}"
-fi
 
 if ! [ -z $commands[tmux] ]; then
 	alias t='sesh connect "$( sesh list -i | fzf )"'

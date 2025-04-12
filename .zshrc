@@ -103,8 +103,9 @@ alias lg='lazygit'
 # }}}
 
 # {{{ fnm (node.js)
-zi ice wait lucid atinit"ZSH_FNM_NODE_VERSION=18; ZSH_FNM_INSTALL_DIR=${HOME}/.local/share/fnm"
+zi ice atinit"ZSH_FNM_NODE_VERSION=18; ZSH_FNM_INSTALL_DIR=${HOME}/.local/share/fnm"
 zi light "dominik-schwabe/zsh-fnm"
+eval "$( fnm env --use-on-cd --shell=zsh )"
 # }}}
 
 # {{{ bun

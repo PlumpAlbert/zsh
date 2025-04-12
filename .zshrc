@@ -156,6 +156,11 @@ zi ice as"program" from"gh-r"
 zi light joshmedeski/sesh
 #}}}
 
+# {{{ delta
+zi ice wait lucid as'program' from'gh-r' sbin'**/delta -> delta'
+zi light dandavison/delta
+# }}}
+
 # }}}
 
 # {{{ base

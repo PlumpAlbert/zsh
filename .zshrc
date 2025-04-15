@@ -150,6 +150,8 @@ zi light cli/cli
 #{{{ neovim
 zi ice as'program' from'gh-r' ver"nightly" bpick'*.tar.gz' sbin'**/bin/nvim -> nvim'
 zi light neovim/neovim
+alias v='nvim'
+alias vi='nvim'
 #}}}
 
 #{{{ sesh

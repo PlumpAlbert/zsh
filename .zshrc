@@ -164,6 +164,11 @@ zi ice wait lucid as'program' from'gh-r' sbin'**/delta -> delta'
 zi light dandavison/delta
 # }}}
 
+# {{{ pomodoro
+zi ice wait lucid as'program' from'gh-r' sbin'**/openpomodoro-cli -> pomodoro'
+zi light open-pomodoro/openpomodoro-cli
+# }}}
+
 # }}}
 
 # {{{ base
